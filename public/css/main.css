@@ -1,0 +1,97 @@
+
+.r--richie-page {
+    margin: 190px auto;
+    width: 80%;
+}
+.r--richie-container {
+    border: 2px solid #ccc;
+    width: 100%;
+    min-height: 50vh;
+    outline: none;
+}
+.r--richie-login {
+    font-family: 'Helvetica Neue', 'Roboto', sans-serif;
+    text-align: center;
+}
+.r--richie-header {
+    font-family: 'Helvetica Neue', 'Roboto', sans-serif;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #fff;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    z-index: 99999999;
+    border-bottom: 2px solid #999;
+}
+.r--richie-header-inner {
+    margin: 0 auto;
+    width: 80%;
+}
+.r--richie-title {
+    font-size: 25px;
+    color: #3485a5;
+}
+.r--richie-caption {
+    color: #333;
+}
+/* clearfix */
+.r--richie-cf:before,
+.r--richie-cf:after {
+    content: " ";
+    display: table;
+}
+.r--richie-cf:after {
+    clear: both;
+}
+.r--richie-cf {
+    *zoom: 1; /* IE6/7 */
+}
+
+.r--richie-left {
+    float: left;
+}
+.r--richie-right {
+    float: right;
+}
+
+.r--richie-input {
+    font-family: inherit;
+    padding: 0.5rem 0.75rem;
+    color: #28aadc;
+    background: transparent;
+    border: .2rem solid #28aadc;
+    font-size: 1.3rem;
+    outline: none;
+    max-width: 100%;
+
+    margin-bottom: 5px;
+}
+
+.r--richie-button {
+    font-family: inherit;
+    cursor: pointer;
+    padding: 0.5rem 0.75rem;
+    color: #fefefe;
+    background: #28aadc;
+    border: .2rem solid #28aadc;
+    font-size: 1.3rem;
+    transition: color .3s, border .3s, background .3s;
+    outline: none;
+}
+.r--richie-button:active {
+    outline: none;
+    background: transparent;
+    color: #28aadc;
+    transition: color .3s, border .3s, background .3s;
+}
+
+@media screen and (max-width: 767px) {
+    .r--richie-header-inner {
+        width: 90%;
+    }
+    .r--richie-page {
+        margin: 17em auto;
+    }
+}

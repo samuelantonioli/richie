@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>richie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <div class="r--richie-header">
+        <div class="r--richie-header-inner r--richie-cf">
+            <div class="r--richie-left">
+                <br>
+                <span class="r--richie-title">richie</span><br>
+                <span class="r--richie-caption">select something from a website and paste it here.</span><br>
+            </div>
+            <div class="r--richie-right">
+                <br>
+                <form action="/" method="POST" onsubmit="return r__richie_copy()">
+                    <input type="hidden" name="content" id="r--richie-content">
+                    <input type="hidden" name="_csrf" value="<%= csrf %>">
+                    <input class="r--richie-input" name="password" type="text" placeholder="password (optional)" value="" autocomplete="off">
+                    <select name="expires" class="r--richie-input">
+                        <option value="0" selected>Never expire</option>
+                        <option value="5">5 minutes</option>
+                        <option value="30">30 minutes</option>
+                        <option value="60">60 minutes</option>
+                        <option value="480">8 hours</option>
+                        <option value="1440">1 day</option>
+                        <option value="43200">30 days</option>
+                    </select>
+                    <button class="r--richie-button" type="submit">Create</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="r--richie-page">
+        <div id="r-richie-container" class="r--richie-container" contenteditable></div>
+    </div>
+    <script>
+    function r__richie_copy() {
+        var html = document.getElementById('r-richie-container').innerHTML;
+        document.getElementById('r--richie-content').value = html;
+        return !!(html);
+    }
+    </script>
+</body>
+</html>

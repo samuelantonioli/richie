@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>richie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <div class="r--richie-login">
+        <h2>You have to login to view the snippet</h2>
+        <form action="/!/<%= id %>" method="POST">
+            <input class="r--richie-input" type="password" placeholder="password" name="password" autofocus>
+            <button class="r--richie-button" type="submit">Show</button>
+        </form>
+    </div>
+    <script>
+    function r__richie_copy() {
+        var html = document.getElementById('r-richie-container').innerHTML;
+        document.getElementById('r--richie-content').value = html;
+        return !!(html);
+    }
+    </script>
+</body>
+</html>
